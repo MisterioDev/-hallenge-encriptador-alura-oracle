@@ -1,0 +1,152 @@
+*,
+*::after,
+*::before {
+  background-color: #f3f5fc;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+header {
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+}
+main {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 70vh;
+}
+.left {
+  width: 60%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.ingreseTexto {
+  border: none;
+  background-color: #f3f5fc;
+  font-size: 32px;
+  color: #0a3871;
+  text-transform: lowercase;
+  resize: none;
+}
+.ingreseTexto:focus {
+  outline: none;
+}
+.ingreseTexto::placeholder {
+  color: #0a3871;
+  font-size: 3rem;
+  text-align: center;
+  opacity: 0.5;
+}
+.buttons {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.right {
+  width: 20%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  border-radius: 20px;
+  background-color: white;
+}
+.textoResultado {
+  border: none;
+  background-color: white;
+  background-image: url(images/Muñeco.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  font-size: 32px;
+  color: #0a3871;
+  resize: none;
+}
+.textoResultado:focus {
+  outline: none;
+}
+.textoResultado::placeholder {
+  color: #0a3871;
+  font-size: 3rem;
+  text-align: center;
+  opacity: 0.5;
+}
+.button-copiar {
+  background-color: white;
+  visibility: hidden;
+}
+.btn-copiar {
+  background-color: white;
+}
+.sin-uso * {
+  background-color: white;
+  color: #0a3871;
+}
+.btn-encriptar,
+.btn-desencriptar,
+.btn-copiar {
+  width: 200px;
+  height: 40px;
+  font-size: 16px;
+  color: #0a3871;
+  border: #0a3871 solid 1px;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.btn-encriptar:hover,
+.btn-desencriptar:hover,
+.btn-copiar:hover {
+  background-color: #0a3871;
+  color: white;
+  border: white solid 1px;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.informacion {
+  font-size: 16px;
+  margin: 10px auto;
+  color: #0a3871;
+}
+@media screen and (max-width: 768px) {
+  main {
+    display: block;
+  }
+  .left {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .right {
+    width: 90%;
+    margin-top: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+    height: 250px;
+  }
+  .textoResultado {
+    background-image: none;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  }
+  .button-copiar {
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .left {
+    width: 90%;
+    height: 500px;
+  }
+}
